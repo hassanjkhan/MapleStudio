@@ -455,7 +455,10 @@ section {
   padding-bottom: 20px;
   position: relative;
 }
-
+.section-title span {
+  font-size: 120%;
+  color: rgb(159, 159, 252);
+}
 .section-title h2::after {
   content: '';
   position: absolute;
