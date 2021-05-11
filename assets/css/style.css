@@ -97,6 +97,7 @@ h6 {
   font-family: 'Poppins', sans-serif;
 }
 
+
 #header .logo a {
   color: #111111;
 }
@@ -107,6 +108,16 @@ h6 {
 
 #header .logo img {
   max-height: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  #header .logo {
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
 }
 
 /*--------------------------------------------------------------
