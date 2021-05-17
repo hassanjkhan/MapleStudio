@@ -58,6 +58,8 @@ h6 {
 .back-to-top:hover {
   background: #e65d5f;
   color: #fff;
+  width: 60px;
+  height: 60px;
 }
 
 .back-to-top.active {
@@ -97,9 +99,8 @@ h6 {
   font-family: 'Poppins', sans-serif;
 }
 
-
 #header .logo a {
-  color: #120D31;
+  color: #120d31;
 }
 
 #header .logo a span {
@@ -369,7 +370,7 @@ h6 {
   background: url('../img/yellow2Hero1.jpeg');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  
+
   background-position: center center;
   background-size: cover;
   background-color: #e9bf65;
@@ -446,11 +447,10 @@ h6 {
   }
 }
 
+#Cost {
+  color: #80f0ec;
 
- #monthlyCost  {
-    color: #C5FFFD;
-    
-    letter-spacing: 2.5px;
+  letter-spacing: 2.5px;
 }
 /*--------------------------------------------------------------
 # Sections General
@@ -639,23 +639,60 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.member {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 .about .container {
   position: relative;
+
   z-index: 10;
+}
+.column {
+  padding: 5%;
+  width: 50%;
+}
+@media only screen and (max-width: 600px) {
+  .column {
+    padding: 5%;
+    width: 50%;
+  }
+  #about {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100%);
+  }
+  .about .container h1 {
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+}
+.about .container .row .column .member-img img {
+  border-radius: 50%;
+  margin-bottom: 80px;
+  max-height: auto;
+  max-width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
 }
 
 .about .content {
   padding: 30px 30px 30px 0;
 }
 
-.about .content h3 {
+.about .container h1 {
   font-weight: 700;
-  font-size: 34px;
-  margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
-.about .content p {
-  margin-bottom: 30px;
+.about .container p {
+  text-align: center;
 }
 
 .about .content .about-btn {
@@ -1308,87 +1345,6 @@ section {
 
 .faq .faq-list a.collapsed .icon-close {
   display: none;
-}
-
-/*--------------------------------------------------------------
-# Team
---------------------------------------------------------------*/
-.team .member {
-  margin-bottom: 20px;
-  overflow: hidden;
-  border-radius: 5px;
-  background: #fff;
-}
-
-.team .member .member-img {
-  position: relative;
-  overflow: hidden;
-}
-
-.team .member .social {
-  position: absolute;
-  left: 0;
-  bottom: 30px;
-  right: 0;
-  opacity: 0;
-  transition: ease-in-out 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.team .member .social a {
-  transition: color 0.3s;
-  color: #111111;
-  margin: 0 3px;
-  border-radius: 50px;
-  width: 36px;
-  height: 36px;
-  background: #e03a3c;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: ease-in-out 0.3s;
-  color: #fff;
-}
-
-.team .member .social a:hover {
-  background: #111111;
-}
-
-.team .member .social i {
-  font-size: 18px;
-  line-height: 0;
-}
-
-.team .member .member-info {
-  padding: 25px 15px;
-}
-
-.team .member .member-info h4 {
-  font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 18px;
-  color: #111111;
-}
-
-.team .member .member-info span {
-  display: block;
-  font-size: 13px;
-  font-weight: 400;
-  color: #aaaaaa;
-}
-
-.team .member .member-info p {
-  font-style: italic;
-  font-size: 14px;
-  line-height: 26px;
-  color: #777777;
-}
-
-.team .member:hover .social {
-  opacity: 1;
-  bottom: 15px;
 }
 
 /*--------------------------------------------------------------
