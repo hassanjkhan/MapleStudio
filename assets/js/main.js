@@ -311,21 +311,29 @@ var functions = firebase.functions();
   });
 })();
 
-const sendEmail = () => {
+
+const sendEmail = (to,subject,text) => {
+  //console.log("send => " + to + " , " + subject  + " , " + text);
   const contactEmailTrigger = firebase
     .functions()
     .httpsCallable("contactEmailTrigger");
   contactEmailTrigger({
-    to: "hassanjkhan6@gmail.com",
-    subject: "HIHIHIHIHIHI from Firebase!",
-    text: "This is the plaintext section of the email body.",
+    to,
+    subject,
+    text,
   })
     .then((result) => {
       // Read result of the Cloud Function.
       /** @type {any} */
       const data = result.data;
-      const sanitizedMessage = data.text;
-      console.log(sanitizedMessage);
+      try {
+        
+        const sanitizedMessage = data.text;
+        console.log(sanitizedMessage);
+      } catch {
+        console.log(data);
+      }
+      
     })
     .then(
       (response) => {

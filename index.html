@@ -1370,15 +1370,10 @@
             </div>
 
             <div class="col-lg-6">
-              <form
-                action="forms/contact.php"
-                method="post"
-                role="form"
-                class="php-email-form"
-              >
+
                 <div class="row">
                   <div class="col form-group">
-                    <input
+                    name: <input
                       type="text"
                       name="name"
                       class="form-control"
@@ -1388,7 +1383,7 @@
                     />
                   </div>
                   <div class="col form-group">
-                    <input
+                    email: <input
                       type="email"
                       class="form-control"
                       name="email"
@@ -1399,7 +1394,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <input
+                  subject: <input
                     type="text"
                     class="form-control"
                     name="subject"
@@ -1409,7 +1404,8 @@
                   />
                 </div>
                 <div class="form-group">
-                  <textarea
+                 <textarea
+                    id = "text"
                     class="form-control"
                     name="message"
                     rows="5"
@@ -1425,9 +1421,11 @@
                   </div>
                 </div>
                 <div class="text-center">
-                  <button onclick="sendEmail()">Send Message</button>
+                  <button onclick="sendEmail(document.getElementById('email').value,
+                                            document.getElementById('subject').value,
+                                            document.getElementById('text').value)">Send Message</button>
                 </div>
-              </form>
+
             </div>
           </div>
         </div>
