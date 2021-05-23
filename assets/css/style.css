@@ -646,7 +646,6 @@ section {
 
 .about .container {
   position: relative;
-
   z-index: 10;
 }
 .column {
@@ -1205,6 +1204,17 @@ section {
 /*--------------------------------------------------------------
 # Pricing
 --------------------------------------------------------------*/
+#pricingBox {
+  margin: 20px;
+}
+
+#pricingRow {
+  text-align:center;
+  margin:0 auto;
+  max-width: 900px;
+}
+
+
 .pricing .box {
   padding: 20px;
   background: #2b2b2b;

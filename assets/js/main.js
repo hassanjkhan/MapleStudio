@@ -314,6 +314,9 @@ var functions = firebase.functions();
 
 const sendEmail = (to,subject,text) => {
   //console.log("send => " + to + " , " + subject  + " , " + text);
+  
+  text = text + ", Reply To: " + to
+  to = "torontomaplestudio@gmail.com"
   const contactEmailTrigger = firebase
     .functions()
     .httpsCallable("contactEmailTrigger");
