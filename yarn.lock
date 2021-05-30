@@ -4,7 +4,7 @@
 
 "@ardatan/aggregate-error@0.0.6":
   "integrity" "sha512-vyrkEHG1jrukmzTPtyWB4NLPauUw5bQeg4uhn8f+1SSynmrOcyvlb1GKQjjgoBzElLdfXCRYX8UnBlhklOHYRQ=="
-  "resolved" "https://registry.npmjs.org/@ardatan/aggregate-error/-/aggregate-error-0.0.6.tgz"
+  " -vved" "https://registry.npmjs.org/@ardatan/aggregate-error/-/aggregate-error-0.0.6.tgz"
   "version" "0.0.6"
   dependencies:
     "tslib" "~2.0.1"
