@@ -112,7 +112,7 @@ var plugins = [{
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-manifest/gatsby-ssr */ "./node_modules/gatsby-plugin-manifest/gatsby-ssr.js"),
   options: {
     "plugins": [],
-    "name": "gatsby-starter-default",
+    "name": "Ruby Labs",
     "short_name": "starter",
     "start_url": "/",
     "background_color": "#663399",
