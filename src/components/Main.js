@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import pic01 from '../images/pic01.jpg'
-import pic02 from '../images/pic02.jpg'
+import pic02 from '../images/FilestWeb.png'
 import pic03 from '../images/pic03.jpg'
 
 class Main extends React.Component {
@@ -27,30 +27,17 @@ class Main extends React.Component {
             this.props.articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
-        >
-          <h2 className="major">Intro</h2>
+        > 
+          <h2 className="major">Who are we?</h2>
           <span className="image main">
             <img src={pic01} alt="" />
           </span>
           <p>
-            cus, ac varius enim ullamcorper eu. Proin
-            aliquam facilisis ante interdum congue. Integer mollis, nisl amet
-            convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
-            magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas.
+            Stuff about us and what we do....
             By the way, check out my <a href="#work">awesome work</a>.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-            dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora
-            torquent per conubia nostra, per inceptos himenaeos. Etiam tristique
-            libero eu nibh porttitor fermentum. Nullam venenatis erat id
-            vehicula viverra. Nunc ultrices eros ut ultricies condimentum.
-            Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae
-            dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in
-            lectus. Pellentesque habitant morbi tristique senectus et netus et
-            malesuada fames ac turpis egestas. In non lorem sit amet elit
-            placerat maximus. Pellentesque aliquam maximus risus, vel sed
-            vehicula.
+            More stuff...
           </p>
           {close}
         </article>
@@ -62,24 +49,18 @@ class Main extends React.Component {
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">Work</h2>
+          <h2 className="major">Portfolio</h2>
           <span className="image main">
             <img src={pic02} alt="" />
           </span>
           <p>
-            Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu,
-            at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent
-            urna nisi, fringila lorem et vehicula lacinia quam. Integer
-            sollicitudin mauris nec lorem luctus ultrices.
+            This is an example of our work for the mobile company <a href="https://www.filest.ca" target="_blank">Filest</a>
           </p>
+          <span className="image main">
+            <img src={pic02} alt="" />
+          </span>
           <p>
-            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
-            Pellentesque condimentum sem. In efficitur ligula tate urna.
-            Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
-            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
-            tempus.
+            Here will be an example of another website
           </p>
           {close}
         </article>
@@ -91,19 +72,44 @@ class Main extends React.Component {
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">About</h2>
-          <span className="image main">
-            <img src={pic03} alt="" />
-          </span>
+          <h2 className="major">Pricing</h2>
+
           <p>
-            Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent
-            eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam
-            erat volutpat. Praesent urna nisi, fringila lorem et vehicula
-            lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.
-            Aliquam libero et malesuada fames ac ante ipsum primis in faucibus.
-            Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit
-            amet.
+              <span>$0 Down</span>, for a standard 5 page small business
+              website. If you need more than that then we have to do custom
+              pricing based on the scope of work.
           </p>
+
+          <div id="pricingRow" class="row">
+            <div class="col">
+              <div id ="pricingBox" class="box" data-aos="fade-up">
+                <h3>Standard</h3>
+                <h4> 175 / month</h4>
+                <ul>
+                  <li>A modern, responsive, mobile-optimized design</li>
+                  <li>Up to 3 redesigns</li>
+                  <li>Around the clock support</li>
+                  <li>Complete end-to-end copywriting services</li>
+                  <li class="na">Blog, Ecommerce, CMS</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col">
+              <div id ="pricingBox" class="box featured" data-aos="fade-up" >
+                <h3>Custom</h3>
+                <h4>175+ / month</h4>
+                <ul>
+                  <li>A modern, responsive, mobile-optimized design</li>
+                  <li>Up to 3 redesigns</li>
+                  <li>Around the clock support</li>
+                  <li>Complete end-to-end copywriting services</li>
+                  <li>Blog, Ecommerce, CMS</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
           {close}
         </article>
 
