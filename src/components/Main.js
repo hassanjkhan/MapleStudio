@@ -131,6 +131,10 @@ class Main extends React.Component {
               <input type="text" name="email" id="email" />
             </div>
             <div className="field">
+              <label htmlFor="email">Phone Number</label>
+              <input type="text" name="number" id="number" />
+            </div>
+            <div className="field">
               <label htmlFor="message">Message</label>
               <textarea name="message" id="message" rows="4"></textarea>
             </div>
