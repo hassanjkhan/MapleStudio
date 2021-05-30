@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Hunter Chang",
   "dependencies": {
-    "babel-plugin-remove-graphql-queries": "^2.9.13",
+    "babel-plugin-remove-graphql-queries": "^2.9.14",
     "gatsby": "^2.24.7",
     "gatsby-plugin-manifest": "^2.2.38",
     "gatsby-plugin-react-helmet": "^3.1.21",
