@@ -1,8 +1,8 @@
 {
-  "name": "Ruby Labs",
-  "description": "Ruby Labs",
+  "name": "gatsby-starter-dimension-v2",
+  "description": "Gatsby Starter - Dimension V2",
   "version": "1.0.0",
-  "author": "Ruby Labs",
+  "author": "Hunter Chang",
   "dependencies": {
     "babel-plugin-remove-graphql-queries": "^2.9.13",
     "gatsby": "^2.24.7",
