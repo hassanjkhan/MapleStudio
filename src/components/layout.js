@@ -27,7 +27,7 @@ const Layout = ({ children, location }) => {
 
   return (
     <StaticQuery
-      const query={graphql`
+      export const query={graphql`
         query SiteTitleQuery {
           site {
             siteMetadata {
