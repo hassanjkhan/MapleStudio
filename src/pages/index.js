@@ -19,6 +19,7 @@ class IndexPage extends React.Component {
     this.handleCloseArticle = this.handleCloseArticle.bind(this)
     this.setWrapperRef = this.setWrapperRef.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount () {
@@ -89,6 +90,11 @@ class IndexPage extends React.Component {
     }
   }
 
+  handleSubmit(){
+
+    this.handleCloseArticle();
+  }
+
   render() {
     return (
       <Layout location={this.props.location}>
@@ -101,6 +107,7 @@ class IndexPage extends React.Component {
               articleTimeout={this.state.articleTimeout}
               article={this.state.article}
               onCloseArticle={this.handleCloseArticle}
+              onSubmit={this.handleSubmit}
               setWrapperRef={this.setWrapperRef}
             />
             <Footer timeout={this.state.timeout} />

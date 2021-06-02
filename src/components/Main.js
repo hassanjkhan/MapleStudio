@@ -121,7 +121,7 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Contact</h2>
-          <form method="post" action="#">
+          <div className="contact">
             <div className="field half first">
               <label htmlFor="name">Name</label>
               <input type="text" name="name" id="name" />
@@ -140,16 +140,18 @@ class Main extends React.Component {
             </div>
             <ul className="actions">
               <li>
-                <input onClick={() => {
-                    this.props.onCloseArticle()
+                <input type="submit" value="Send Message" className="special" 
+                  onClick={() => {
+                    this.props.onSubmit()
                   }}
-                  type="submit" value="Send Message" className="special" />
+                />
               </li>
               <li>
                 <input type="reset" value="Reset" />
               </li>
             </ul>
-          </form>
+            </div>
+          
           {close}
         </article>
       </div>
@@ -162,6 +164,7 @@ Main.propTypes = {
   article: PropTypes.string,
   articleTimeout: PropTypes.bool,
   onCloseArticle: PropTypes.func,
+  onSubmit: PropTypes.func,
   timeout: PropTypes.bool,
   setWrapperRef: PropTypes.func.isRequired,
 }
