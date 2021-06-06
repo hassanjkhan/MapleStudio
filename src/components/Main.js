@@ -48,15 +48,18 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         > 
           <h2 className="major">Who are we?</h2>
-          <span className="image main">
+          {/* <span className="image main">
             <img src={pic01} alt="" />
-          </span>
-          <p>
+          </span> */}
+          {/* <p>
             Stuff about us and what we do....
             By the way, check out my <a href="#work">awesome work</a>.
-          </p>
+          </p> */}
           <p>
-            More stuff...
+            We are a brother duo web agency making it affordable and easy for small businesses to have professional websites.
+            With over a decade of experience building websites we started Ruby Labs with the mission of making it accessible for people to get more clients and serve their community with a modern web presence.
+            While other large scale agencies will ask you for thousands of dollars, we bring the same quality of work with a greater attention to your needs and a pricing model that wont break the bank.
+            If you've wanted to establish a greater presence for your business online and you want to work with people who will listen and take your needs seriously, call us today.
           </p>
           {close}
         </article>
@@ -75,12 +78,12 @@ class Main extends React.Component {
           <p>
             This is an example of our work for the mobile company <a href="https://www.filest.ca" target="_blank">Filest</a>
           </p>
-          <span className="image main">
+          {/* <span className="image main">
             <img src={pic02} alt="" />
           </span>
           <p>
             Here will be an example of another website
-          </p>
+          </p> */}
           {close}
         </article>
 
@@ -139,8 +142,9 @@ class Main extends React.Component {
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">Contadfdsfsdfdsct</h2>
-          <div className="contact">
+          <h2 className="major">Contact</h2>
+          <p>Contact at us at (647) - 409 - 8631 or email us at rubylabsmedia@gmail.com</p>
+          {/* <div className="contact">
             <div className="field half first">
               <label htmlFor="name">Name</label>
               <input type="text" name="name" id="name" value={this.props.contactName} onChange={(e)=>this.props.handleInput(e)} />
@@ -171,11 +175,11 @@ class Main extends React.Component {
                     this.props.onReset()
                   }}/>
               </li>
-            </ul>
+            </ul> */}
 
           
 
-            </div>
+            {/* </div> */}
           
           {close}
         </article>
