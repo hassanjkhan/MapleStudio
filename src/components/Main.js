@@ -56,10 +56,12 @@ class Main extends React.Component {
             By the way, check out my <a href="#work">awesome work</a>.
           </p> */}
           <p>
-            We are a brother duo web agency making it affordable and easy for small businesses to have professional websites.
-            With over a decade of experience building websites we started Ruby Labs with the mission of making it accessible for people to get more clients and serve their community with a modern web presence.
-            While other large scale agencies will ask you for thousands of dollars, we bring the same quality of work with a greater attention to your needs and a pricing model that wont break the bank.
-            If you've wanted to establish a greater presence for your business online and you want to work with people who will listen and take your needs seriously, call us today.
+          We are a brother duo web agency making it affordable and easy for small businesses to have professional websites. 
+          With over a decade of experience building websites, we started Ruby Labs with the mission of making it accessible 
+          for people to get more clients and serve their community with a modern web presence. While other large-scale agencies 
+          will ask you for thousands of dollars, we bring the same quality of work with greater attention to your needs and a pricing 
+          model that won't break the bank. If you've wanted to establish a greater presence for your business online and you want to 
+          work with people who will listen and take your needs seriously, call us today.
           </p>
           {close}
         </article>
@@ -96,10 +98,19 @@ class Main extends React.Component {
         >
           <h2 className="major">Pricing</h2>
 
-          <p>
-              <span>$0 Down</span>, for a standard 5 page small business
-              website. If you need more than that then we have to do custom
-              pricing based on the scope of work.
+          <p> We created our pricing model because of our high degree of confidence in our ability to provide value for small businesses.
+          These days you need a modern and highly converting website before you can even take your business's online presence off the ground. 
+          We are so confident in our ability to partner businesses just like yours that we work with all of our clients on a month to month cancel any time
+          for any reason agreement. For any questions about our pricing 
+          <button
+            onClick={() => {
+             // this.props.onCloseArticle()
+
+              this.props.onOpenArticle('contact',true)
+            }}
+          >
+            <span>give us a call today.</span>
+          </button>
           </p>
 
           <div id="pricingRow" class="row">
@@ -193,6 +204,7 @@ Main.propTypes = {
   route: PropTypes.object,
   article: PropTypes.string,
   articleTimeout: PropTypes.bool,
+  onOpenArticle: PropTypes.func,
   onCloseArticle: PropTypes.func,
   onSubmit: PropTypes.func,
   onReset: PropTypes.func,

@@ -26,6 +26,7 @@ class IndexPage extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleReset = this.handleReset.bind(this);
     this.handleInput = this.handleInput.bind(this);
+    this.openArticle = this.openArticle.bind(this);
   }
 
   componentDidMount () {
@@ -46,8 +47,7 @@ class IndexPage extends React.Component {
     this.wrapperRef = node;
   }
 
-  handleOpenArticle(article) {
-
+  openArticle(article){
     this.setState({
       isArticleVisible: !this.state.isArticleVisible,
       article
@@ -64,6 +64,18 @@ class IndexPage extends React.Component {
         articleTimeout: !this.state.articleTimeout
       })
     }, 350)
+  }
+  handleOpenArticle(article, transition) {
+    if(transition){
+      this.handleCloseArticle();
+      setTimeout(() => {
+           this.openArticle(article) 
+
+      }, 350);
+    } else {
+      this.openArticle(article)
+    }
+  
 
   }
 
@@ -139,6 +151,7 @@ class IndexPage extends React.Component {
               timeout={this.state.timeout}
               articleTimeout={this.state.articleTimeout}
               article={this.state.article}
+              onOpenArticle={this.handleOpenArticle}
               onCloseArticle={this.handleCloseArticle}
               contactEmail={this.state.contact_email}
               contactName={this.state.contact_name}
