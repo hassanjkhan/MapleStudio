@@ -22,6 +22,42 @@ function alertMessage(success){
 }
 
 
+// const sendEmail = (to,subject,text) => {
+//   //console.log("send => " + to + " , " + subject  + " , " + text);
+  
+//   text = text + ", Reply To: " + to
+//   to = "hassanjkhan6@gmail.com"
+//   const contactEmailTrigger = firebase
+//     .functions()
+//     .httpsCallable("contactEmailTrigger");
+//   contactEmailTrigger({
+//     to,
+//     subject,
+//     text,
+//   })
+//     .then((result) => {
+//       // Read result of the Cloud Function.
+//       /** @type {any} */
+//       const data = result.data;
+//       try {
+        
+//         const sanitizedMessage = data.text;
+//         console.log(sanitizedMessage);
+//       } catch {
+//         console.log(data);
+//       }
+      
+//     })
+//     .then(
+//       (response) => {
+//         console.log(response);
+//       },
+//       (error) => {
+//         console.log(error);
+//       }
+//     );
+// };
+
 class Main extends React.Component {
 
   render() {
@@ -154,8 +190,12 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Contact</h2>
-          <p>Contact at us at (647) - 409 - 8631 or email us at rubylabsmedia@gmail.com</p>
-          {/* <div className="contact">
+          {/* <Contact
+            onSubmit={this.props.handleSubmit}
+            onReset={this.props.handleReset}
+          /> */}
+        
+          <div className="contact">
             <div className="field half first">
               <label htmlFor="name">Name</label>
               <input type="text" name="name" id="name" value={this.props.contactName} onChange={(e)=>this.props.handleInput(e)} />
@@ -186,11 +226,14 @@ class Main extends React.Component {
                     this.props.onReset()
                   }}/>
               </li>
-            </ul> */}
 
+              <p id="contact-text"> Contact at us at (647) - 409 - 8631 or email us at rubylabsmedia@gmail.com </p>
+            </ul>
+               
+           
           
 
-            {/* </div> */}
+          </div>
           
           {close}
         </article>

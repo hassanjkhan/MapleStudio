@@ -5,7 +5,10 @@
 ///
 
 /* Form */
-
+	#contact-text {
+		padding-top: 30px;
+		text-align: center;
+	}
 	.contact {
 		$gutter: _size(element-margin) * 0.75;
 

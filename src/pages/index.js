@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
+import firebase from "gatsby-plugin-firebase"
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -137,6 +138,25 @@ class IndexPage extends React.Component {
   }
   handleSubmit(){
 
+    
+    let text = this.state.contact_message 
+      text+= "\nPhone Number: " + this.state.contact_number;
+      text+= "\nName: " + this.state.contact_name;
+      text+= "\nEmail: " + this.state.contact_email;
+      
+      
+    const to = "rubylabsmedia@gmail.com"
+    const subject = "this is the sub"
+    const email = firebase.functions().httpsCallable("contactEmailTrigger");
+    email({
+        to,
+        subject,
+        text,
+      }).then((result) => {
+        console.log(result.data.output);
+      }).catch((error) => {
+        console.log(`error: ${JSON.stringify(error)}`);
+      });
     this.handleCloseArticle();
   }
 
