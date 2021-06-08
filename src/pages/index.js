@@ -4,7 +4,8 @@ import Layout from '../components/layout'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
-import firebase from "gatsby-plugin-firebase"
+// import firebase from "gatsby-plugin-firebase"
+import firebase from "firebase"
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -28,6 +29,18 @@ class IndexPage extends React.Component {
     this.handleReset = this.handleReset.bind(this);
     this.handleInput = this.handleInput.bind(this);
     this.openArticle = this.openArticle.bind(this);
+    const firebaseConfig = {
+      apiKey: "AIzaSyAU3hCvBAwKyZ7lULDKOOn0XraBnkQuCaQ",
+      authDomain: "maplestudio-4f0fd.firebaseapp.com",
+      projectId: "maplestudio-4f0fd",
+      storageBucket: "maplestudio-4f0fd.appspot.com",
+      messagingSenderId: "485345047309",
+      appId: "1:485345047309:web:dcdbfd55c4891f41bab644",
+      measurementId: "G-4Q43LVNTEL"
+    };
+    
+    const firebaseApp = firebase.initializeApp(firebaseConfig);
+    
   }
 
   componentDidMount () {
@@ -144,9 +157,8 @@ class IndexPage extends React.Component {
       text+= "\nName: " + this.state.contact_name;
       text+= "\nEmail: " + this.state.contact_email;
       
-      
     const to = "rubylabsmedia@gmail.com"
-    const subject = "this is the sub"
+    const subject = "Customer Contact: " + this.state.contact_name + " " + this.state.contact_number
     const email = firebase.functions().httpsCallable("contactEmailTrigger");
     email({
         to,
