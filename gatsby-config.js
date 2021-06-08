@@ -37,7 +37,17 @@ module.exports = {
           messagingSenderId: "485345047309",
           appId: "1:485345047309:web:dcdbfd55c4891f41bab644",
           measurementId: "G-4Q43LVNTEL"
-        }
+        },
+        features: {
+          auth: false,
+          database: false,
+          firestore: false,
+          storage: false,
+          messaging: false,
+          functions: true,
+          performance: false,
+          analytics: false,
+          },
       }
     }
   ],
