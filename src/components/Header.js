@@ -18,7 +18,7 @@ const Header = props => (
     <nav>
       <ul>
         <li>
-          <button
+          <button 
             onClick={() => {
               props.onOpenArticle('intro')
             }}

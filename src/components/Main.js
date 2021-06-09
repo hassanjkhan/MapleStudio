@@ -22,42 +22,6 @@ function alertMessage(success){
 }
 
 
-// const sendEmail = (to,subject,text) => {
-//   //console.log("send => " + to + " , " + subject  + " , " + text);
-  
-//   text = text + ", Reply To: " + to
-//   to = "hassanjkhan6@gmail.com"
-//   const contactEmailTrigger = firebase
-//     .functions()
-//     .httpsCallable("contactEmailTrigger");
-//   contactEmailTrigger({
-//     to,
-//     subject,
-//     text,
-//   })
-//     .then((result) => {
-//       // Read result of the Cloud Function.
-//       /** @type {any} */
-//       const data = result.data;
-//       try {
-        
-//         const sanitizedMessage = data.text;
-//         console.log(sanitizedMessage);
-//       } catch {
-//         console.log(data);
-//       }
-      
-//     })
-//     .then(
-//       (response) => {
-//         console.log(response);
-//       },
-//       (error) => {
-//         console.log(error);
-//       }
-//     );
-// };
-
 class Main extends React.Component {
 
   render() {
@@ -138,15 +102,15 @@ class Main extends React.Component {
           These days you need a modern and highly converting website before you can even take your business's online presence off the ground. 
           We are so confident in our ability to partner businesses just like yours that we work with all of our clients on a month to month cancel any time
           for any reason agreement. For any questions about our pricing 
-          <button
+          <a id="call-today"
             onClick={() => {
              // this.props.onCloseArticle()
 
               this.props.onOpenArticle('contact',true)
             }}
           >
-            <span>give us a call today.</span>
-          </button>
+            <span> give us a call today.</span>
+          </a>
           </p>
 
           <div id="pricingRow" class="row">
